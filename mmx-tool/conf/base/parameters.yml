@@ -1,0 +1,7 @@
+adstock_lambda:
+  calls: 0.6
+  media_spend: 0.5
+  impressions: 0.4
+  email_open: 0.3
+
+saturation_alpha: 1.2

@@ -4,10 +4,22 @@
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
 
 raw_mmm_data:
-  type: pandas.CSVDataSet
-  filepath: data/01_raw/20260106_MMx_Master_Universe_v0.01sj.csv
-
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/Raw/20260106_MMx_Master_Universe_v0.01sj.csv
 
 clean_mmm_data:
-  type: pandas.ParquetDataSet
-  filepath: data/02_intermediate/clean_mmm.parquet
+  type: kedro_datasets.pandas.ParquetDataset
+  filepath: Data/02_intermediate/clean_mmm_data.parquet
+
+feature_mmm_data:
+  type: kedro_datasets.pandas.ParquetDataset
+  filepath: Data/03_primary/feature_mmm_data.parquet
+
+
+lme_model:
+  type: kedro_datasets.pickle.PickleDataset
+  filepath: Data/06_models/lme_model.pkl
+
+validation_predictions:
+  type: kedro_datasets.pandas.ParquetDataset
+  filepath: Data/07_model_output/validation_predictions.parquet

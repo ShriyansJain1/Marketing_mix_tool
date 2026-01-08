@@ -1,0 +1,2 @@
+[console_scripts]
+mmx-tool = mmx_tool.__main__:main
