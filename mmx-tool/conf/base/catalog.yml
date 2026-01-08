@@ -21,5 +21,18 @@ lme_model:
   filepath: Data/06_models/lme_model.pkl
 
 validation_predictions:
-  type: kedro_datasets.pandas.ParquetDataset
+  type: kedro_datasets.pandas.CSVDataset
   filepath: Data/07_model_output/validation_predictions.parquet
+
+
+model_results:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/08_reporting/model_results.csv
+
+model_metrics:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/08_reporting/model_metrics.csv
+
+channel_contribution:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/07_model_output/channel_contribution.parquet
