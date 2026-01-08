@@ -34,5 +34,27 @@ model_metrics:
   filepath: Data/08_reporting/model_metrics.csv
 
 channel_contribution:
-  type: kedro_datasets.pandas.CSVDataset
+  type: kedro_datasets.pandas.ParquetDataset
   filepath: Data/07_model_output/channel_contribution.parquet
+
+roi_table:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/08_reporting/roi_table.csv
+
+marginal_roi:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/08_reporting/marginal_roi.csv
+
+optimized_budget:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/08_reporting/optimized_budget.csv
+
+budget_comparison:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: Data/08_reporting/budget_comparison.csv
+
+npi_random_effects:
+  type: kedro_datasets.pandas.ParquetDataset
+  filepath: Data/07_model_output/npi_random_effects.parquet
+
+
